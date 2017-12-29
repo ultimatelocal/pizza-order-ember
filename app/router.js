@@ -7,6 +7,10 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('home', function() {
+   this.route('details', { path: '/:id' });
+  });
+  this.route('cart');
 });
 
 export default Router;
